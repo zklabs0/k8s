@@ -10,8 +10,7 @@
 shift
 args=()
 for arg in "$@"; do
-  env_expanded=${arg@P}
-  args+=(-e "$env_expanded")
+  args+=(-e "$arg")
 done
 
 sed "${args[@]}"
